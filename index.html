@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Crypto Price Tracker</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.4/dist/full.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              common: ["Rubik", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+</head>
+<body>
+    <body class="mx-auto w-9/12">
+        <section class="hidden md:block ">
+            <div class="navbar bg-base-100">
+                <div class="flex-1">
+                  <a class="btn btn-ghost normal-case text-xl">Crypto</a>
+                </div>
+                <div class="flex-none">
+                  <ul class="menu menu-horizontal px-1 bg-violet-900 rounded-lg text-white">
+                    <li><a href="/trending.html">Trending CryptoCurrencies</a></li>
+                  </ul>
+                </div>
+              </div>
+        </section>
+        <section id="" class="mt-16">
+            <div class="block md:hidden items-center">
+                <ul class="menu menu-horizontal px-1 bg-violet-900 rounded-lg text-white">
+                  <li><a href="/trending.html">Trending CryptoCurrencies</a></li>
+                </ul>
+              </div>
+            <h3 class="text-4xl font-mono font-bold my-4 text-center text-gray-800">CryptoCurrencies Today</h3>
+            <button id="load-all" class="btn btn-info btn-sm mb-4 text-white shadow">Load all</button>
+            <div class="overflow-x-auto hidden md:block">
+                <table id="coin-list-table" class="table table-compact w-full">
+                  <thead>
+                    <tr>
+                      <th></th> 
+                      <th>Coin</th> 
+                      <th>Current Price in USD</th> 
+                      <th>Price Change in 24h</th> 
+                      <th>Market Cap</th> 
+                    </tr>
+                  </thead> 
+                  <tbody>
+
+                  </tbody> 
+                </table>
+            </div>
+            <div class="block md:hidden">
+                <div class="card grid grid-cols-1 gap-4" id="coin-card">
+
+                </div>
+            </div>
+        </section>
+        <footer class="footer footer-center p-4 bg-neutral text-neutral-content mt-10">
+            <div>
+              <p>Copyright © 2023 - All right reserved by <a href="https://www.facebook.com/me.alaminrifat">Al Amin Rifat</a> </p>
+            </div>
+          </footer>
+        <script src="js/CryptoCurrencies.js"></script>
+</body>
+</html>
