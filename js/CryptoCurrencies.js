@@ -10,6 +10,7 @@ const loadData = (limit) => {
         .then((data) => displayData(data,limit));
 };
 const displayData = (datas,limit) => {
+    toggleLoading(true);
     let count = 1;
     datas = datas.slice(0, limit);
     datas.forEach((coin) => {
@@ -87,6 +88,7 @@ const displayData = (datas,limit) => {
        }
         table.appendChild(newRow);
         card.appendChild(newCard);
+        toggleLoading(false);
         console.log(coin.id);
     });
 };

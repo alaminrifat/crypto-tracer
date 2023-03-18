@@ -55,6 +55,11 @@
               </div>
             <h3 class="text-4xl font-mono font-bold my-4 text-center text-gray-800">CryptoCurrencies Today</h3>
             <button id="load-all" class="btn btn-info btn-sm mb-4 text-white shadow">Load all</button>
+            <!-- loading start -->
+            <div id="loader" class="flex items-center justify-center mb-10 ">
+              <button class="btn btn-wide loading bg-red-600 border-none">loading please wait</button>
+            </div>
+            <!-- loading End -->
             <div class="overflow-x-auto hidden md:block">
                 <table id="coin-list-table" class="table table-compact w-full">
                   <thead>
@@ -83,5 +88,6 @@
             </div>
           </footer>
         <script src="js/CryptoCurrencies.js"></script>
+        <script src="js/utilities.js"></script>
 </body>
 </html>

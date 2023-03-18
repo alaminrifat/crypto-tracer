@@ -10,6 +10,7 @@ fetch(url)
 const table = document.getElementById('list-table');
 
 function loadData(coins) {
+  toggleLoading(true);
   coins.forEach((coin) => {
     const newRow = document.createElement('tr')
     const data = coin.item;
@@ -36,5 +37,7 @@ function loadData(coins) {
     `
     table.appendChild(newRow);
     console.log(data);
+    toggleLoading(false);
   });
+  
 }
